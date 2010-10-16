@@ -1,0 +1,7 @@
+.kiva-mfi-checker-blacklist 
+{
+    /*outline: 2px solid red !important;*/
+    outline: 2px solid red !important;
+    background-color: black !important;
+    color: white !important;
+}

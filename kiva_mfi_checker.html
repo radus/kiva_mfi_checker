@@ -1,0 +1,274 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MFI checker options</title>
+<link type="text/css" rel="stylesheet" href="options.css" />
+<script type="text/javascript">
+        var Mfi_Names = [
+            "ACCION USA",
+            "ADEPHCA",
+            "ADIM (Asociación Alternativa Para el Desarrollo Integral de las Mujeres)",
+            "Admic Nacional",
+            "AFODENIC",
+            "Ahon sa Hirap, Inc. (ASHI)",
+            "Al Majmoua Lebanese Association for Development",
+            "Al-Thiqa Organization",
+            "Alalay sa Kaunlaran, Inc. (ASKI)",
+            "Alidé",
+            "Amasezerano Community Banking S.A.",
+            "Ameen s.a.l.",
+            "AMK (Angkor Microfinance Kampuchea)",
+            "Apoyo Integral",
+            "Aqroinvest Credit Union",
+            "AREGAK Unversal Credit Organization",
+            "Ariana Financial Services Joint Stock Company (AFS), a partner of Mercy Corps",
+            "Asasah, a partner of Save the Children",
+            "Asociación Arariwa",
+            "Asociación ASDIR",
+            "Association for Rural Development (ARD)",
+            "Bai Tushum & Partners",
+            "BRAC South Sudan",
+            "BRAC Sri Lanka",
+            "BRAC Uganda",
+            "Caja Rural Señor de Luren",
+            "CAURIE Microfinance, a partner of Catholic Relief Services",
+            "Center for Community Transformation Credit Cooperative (CCT)",
+            "CEPRODEL",
+            "CHF International Access to Credit Services Initiatives (ACSI) Iraq",
+            "Christian Rural Aid Network (CRAN)",
+            "CIDRE",
+            "Community Economic Ventures, Inc. (CEVI), a partner of VisionFund International",
+            "Cooperativa San Jose",
+            "CrediComun",
+            "Credit Mongol LLC",
+            "CREDIT, a partner of World Relief",
+            "EDAPROSPO",
+            "EDESA",
+            "Edpyme Alternativa",
+            "Emprender",
+            "Esperanza International Dominican Republic, a partner of HOPE International",
+            "FAMA OPDF",
+            "FAPE",
+            "Faulu Kenya",
+            "FECECAV",
+            "FINCA Peru",
+            "Fondo Esperanza",
+            "FUDECOSUR",
+            "Fund for Thanh Hoa Poor Women (FPW), a partner of Save the Children",
+            "Fundación AgroCapital, a partner of ACDI/VOCA",
+            "Fundacion D-MIRO Mision Alianza",
+            "Fundación ESPOIR",
+            "Fundación Leon 2000",
+            "Fundación Mario Santo Domingo (FMSD)",
+            "Fundacion Mujer",
+            "Fundación para la Vivienda Progresiva (FVP), a partner of CHF International",
+            "Fundación Paraguaya",
+            "Fundacion Realidad A.C (FRAC), a partner of World Vision International",
+            "Gata Daku Multi-purpose Cooperative (GDMPC)",
+            "Grounded and Holistic Approach for People's Empowerment (GHAPE)",
+            "Hagdan sa Pag-uswag Foundation, Inc. (HSPFI)",
+            "Hattha Kaksekar Limited (HKL), a partner of Save the Children",
+            "Hekima, a partner of World Relief",
+            "Hluvuku-Adsema",
+            "HOFOKAM Ltd., a partner of Catholic Relief Services",
+            "HOPE Congo S.A.",
+            "HOPE DRC, a partner of HOPE International",
+            "HOPE Ukraine/Nadiya, a partner of HOPE International",
+            "IMON International",
+            "IMPRO",
+            "Juhudi Kilimo (JK)",
+            "K-Met Savings and Credit Cooperative Ltd",
+            "Kenya Agency for Development of Enterprise and Technology (KADET), a partner of World Vision International",
+            "Komak Credit Union",
+            "Koperasi Mitra Usaha Kecil (MUK)",
+            "LAPO Sierra Leone (LAPOSL)",
+            "Lift Above Poverty Organization (LAPO)",
+            "Local Enterprise Assistance Program (LEAP), a partner of World Hope International and World Relief",
+            "Manuela Ramos / CrediMUJER",
+            "MAXIMA Mikroheranhvatho Co., Ltd.",
+            "MCC Mol Bulak Finance LLC",
+            "Micro Credit for Development and Transformation SACCO (MCDT SACCO)",
+            "Microfinanzas Prisma",
+            "Microfund Togo",
+            "Microinvest",
+            "MLF Microinvest, a partner of ACDI/VOCA",
+            "MLO Humo and Partners",
+            "Negros Women for Tomorrow Foundation, Inc. (NWTF)",
+            "Nor Horizon Universal Credit Organization Limited Liability Company",
+            "Opportunity Fund",
+            "PADECOMSM",
+            "Paglaum Multi-Purpose Cooperative (PMPC)",
+            "Palestine for Credit & Development (FATEN)",
+            "Patan Business and Professional Women",
+            "Pearl Microfinance Limited",
+            "Prisma Honduras, S.A.",
+            "Pro Mujer Bolivia",
+            "Ryada, a partner of CHF International",
+            "Salone Microfinance Trust (SMT), a partner of ChildFund International",
+            "SEDA",
+            "SEF International UCO LLC, a partner of World Vision International",
+            "Senegal Ecovillage Microfinance Fund (SEM)",
+            "Sero Lease and Finance Ltd. (SELFINA)",
+            "Sinapi Aba Trust (SAT)",
+            "SMEP (Small and Micro Enterprise Programme)", 
+            "Soro Yiriwaso, a partner of Save the Children", 
+            "South Pacific Business Development (SPBD)", 
+            "Tanaoba Lais Manekat Foundation (TLM)", 
+            "Tujijenge Tanzania Ltd", 
+            "Turame Community Finance, a partner of World Relief and HOPE International", 
+            "TYM Fund", 
+            "UIMCEC, a partner of ChildFund International", 
+            "Urwego Opportunity Bank of Rwanda (UOB), a partner of World Relief, HOPE International, and Opportunity International", 
+            "Vision Finance Company s.a. (VFC), a partner of World Vision International", 
+            "Women and Associations for Gain both Economic and Social (WAGES)", 
+            "XacBank", 
+            "Yehu Microfinance Trust",
+            "Youth Self Employment Foundation (YOSEFO)",
+            "Zene za Zene, a partner of Women for Women International"
+        ];
+    function fill_mfi_names() {
+        var mfi_list = document.getElementById("mfi_list");
+        for (var i in Mfi_Names) {
+            var new_option = document.createElement("option");
+            new_option.text = Mfi_Names[i];
+            new_option.value = Mfi_Names[i];
+            mfi_list.options.add(new_option);
+        }
+    }
+
+    function append_selected_mfis() {
+        var selected_mfis_field = document.getElementById("selected_mfis");
+        var selected_mfis = selected_mfis_field.value.split("\n");
+        var mfi_list_field = document.getElementById("mfi_list");
+        for (var i in mfi_list_field.children) {
+            var option = mfi_list_field.children[i];
+            if(option.selected) {
+                if(selected_mfis.indexOf(option.text) < 0) {
+                    //option not added yet, put it in the list
+                    selected_mfis.push(option.text);
+                }
+            }
+        }
+        var empty = selected_mfis.indexOf("");
+        while (empty != -1) {
+            selected_mfis.splice(empty, 1);
+            empty = selected_mfis.indexOf("");
+        }
+            
+        selected_mfis_field.value = selected_mfis.join("\n");
+    }
+
+    function validate_mfis() {
+        var selected_mfis_field = document.getElementById("selected_mfis");
+        var selected_mfis = selected_mfis_field.value.split("\n");
+        var invalid_entries = 0;
+        for (var i in selected_mfis) {
+            if(selected_mfis[i] != "") {
+               if(Mfi_Names.indexOf(selected_mfis[i]) == -1) {
+                    selected_mfis[i] = "?" + selected_mfis[i];
+                    invalid_entries++;
+                }
+            }
+        }
+        if (invalid_entries==0) {
+            alert("All entries are valid.");
+        } else {
+            selected_mfis_field.value = selected_mfis.join("\n");
+            alert(invalid_entries + " entries invalid.\nInvalid entries have been marked with a ?.")
+        } 
+    }
+
+    function save_options() {
+        var selected_mfis = document.getElementById("selected_mfis");
+        var list_type;
+        var list_type_rbs = document.getElementsByName("list_type");
+        for (var i=0; i<list_type_rbs.length; i++) {
+            if (list_type_rbs[i].checked) {
+                list_type = list_type_rbs[i].value;
+            }
+        }
+        localStorage["mfi_list_type"] = list_type;
+        localStorage[list_type] = selected_mfis.value;
+        alert("Options saved.");
+    }
+
+    function get_selected_list_type() {
+        var list_type_rbs = document.getElementsByName("list_type");
+        var list_type = "mfi_blacklist";
+        for (var i=0; i<list_type_rbs.length; i++) {
+            if (list_type_rbs[i].checked) {
+                list_type = list_type_rbs[i].value;
+            }
+        }
+        return list_type;
+    }
+
+    var Current_List_Type = "mfi_blacklist";
+
+    function check_for_list_changes(list_type) {
+        var selected_mfis = document.getElementById("selected_mfis").value;
+        if (selected_mfis != localStorage[list_type]) {
+            if (confirm("You have modified the mfi list. Do you want to save the changes?")) {
+                localStorage[list_type] = selected_mfis;
+            }
+        }
+    }
+
+    function update_selected_mfis() {
+        var list_type = get_selected_list_type();
+        if (list_type != Current_List_Type) {
+            check_for_list_changes(Current_List_Type);
+            Current_List_Type = list_type;
+        }
+        var selected_mfis = document.getElementById("selected_mfis");
+        if (localStorage[list_type]) {
+            selected_mfis.value = localStorage[list_type];
+        }   
+    } 
+
+    function restore_options() {
+        var list_type_rbs = document.getElementsByName("list_type");
+        var list_type = "mfi_blacklist";
+        if (localStorage["mfi_list_type"]) {
+            list_type = localStorage["list_type"];  
+        }
+        for (var i=0; i<list_type_rbs.length; i++) {
+            if (list_type_rbs[i].value == list_type) {
+                list_type_rbs[i].checked = true;
+            }
+        }
+        update_selected_mfis();
+    }
+</script>
+
+</head>
+
+<body onload="fill_mfi_names(); restore_options();">
+<table width="90%">
+<tr> 
+    <td>List type:</td>
+    <td colspan="2" align="left">
+        <input type="radio" name="list_type" value="mfi_blacklist" checked onclick="update_selected_mfis()">Black list</input>
+        <input type="radio" name="list_type" value="mfi_whitelist" onclick="update_selected_mfis()">White list</input>
+    </td>
+<tr>
+
+<td><label for="selected_mfis">My MFI Names:</label></td>
+<td colspan="3" rowspan="2" width="50%"><textarea name="selected_mfis" id="selected_mfis" style="height: 200px; width: 100%;" rows="50" cols="40"></textarea></td>
+<td><label for="mfi_list">Kiva MFI/Partner Names:</label></td>
+<tr><td></td>
+<td width="40%"><select id="mfi_list" name="mfi_list" size="4" multiple="multiple" style="height: 180px; width: 100%; overflow: auto;">
+</select></td>
+<tr><td></td>
+<td>Enter each MFI on a new line</td>
+<td align="center"><button type="button" name="validate" id="validate" value="Validate" class="button_style" onclick="validate_mfis()">Validate</button></td>
+<td align="center"><button type="button" name="sort" id="sort" value="Sort" class="button_style">Sort</button></td>
+<td align="left"><button type="button" name="append" id="append" value="<< Append" class="button_style" onclick="append_selected_mfis()">&lt;&lt;Append</button></td>
+</tr>
+</table>
+<br><br>
+<p align="right">
+<button name="ok" id="ok" value="Ok" class="button_style" onclick="save_options()">Apply</button>&nbsp;
+</p>
+</body>
+</html>

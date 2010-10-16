@@ -1,0 +1,22 @@
+{
+    "name": "Kiva MFI Checker",
+    "version": "0.1",
+    "description": "Highlight selected MFIs on kiva lending page.",
+    "page_action": {
+        "default_icon": "icon.png"
+        // "default_popup": "kiva_mfi_popup.html" 
+    },
+    "background_page": "kiva_mfi_background.html",
+    "options_page": "kiva_mfi_checker.html",
+    "content_scripts": [
+        {
+            "matches": ["http://www.kiva.org/lend*"],
+            "css": ["kiva_mfi_lists.css"],
+            "js": ["kiva_mfi_checker.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "permissions": [
+        "tabs"
+    ]
+}

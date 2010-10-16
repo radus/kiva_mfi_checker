@@ -1,0 +1,21 @@
+<html>
+    <script>
+        function checkForKivaLendUrl(tabId, changeInfo, tab) {
+            var kivaLendRegex = /kiva\.org\/lend.*/;
+            if (kivaLendRegex.test(tab.url)) {
+                chrome.pageAction.show(tabId);
+                if (tab.status == "complete") {
+                    highlightMfis(tab);
+                }
+            }
+        }
+
+        function highlightMfis(tab) {
+            var list_type = localStorage["mfi_list_type"];
+            chrome.tabs.sendRequest(tab.id, {selected_mfis: localStorage[list_type], page_type: "old"});
+        }
+
+        chrome.tabs.onUpdated.addListener(checkForKivaLendUrl);
+        chrome.pageAction.onClicked.addListener(highlightMfis);
+    </script>
+</html>
